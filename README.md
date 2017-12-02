@@ -58,6 +58,9 @@ docker build -t floydhub/dl-docker:cpu -f Dockerfile.cpu .
 
 **GPU Version**
 ```bash
+good to install torch dependencies : 
+curl -s https://raw.githubusercontent.com/torch/distro/master/install-deps | bash
+this may need sudo privileges
 docker build -t floydhub/dl-docker:gpu -f Dockerfile.gpu .
 ```
 This will build a Docker image named `dl-docker` and tagged either `cpu` or `gpu` depending on the tag your specify. Also note that the appropriate `Dockerfile.<architecture>` has to be used.
